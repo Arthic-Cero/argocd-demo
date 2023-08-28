@@ -28,10 +28,10 @@ jobs:
       - name: Update Image tag - Dev
         run: |
           ls -al
-          sed "s/IMG_FULL_PATH_PLACEHOLDER/jlinares14\/argocd-demo/g" values/values-dev-template.yaml > values-dev.yaml
-          sed -i "s/TAG_PLACEHOLDER/${{ github.sha }}/g" values-dev.yaml
+          sed "s/IMG_FULL_PATH_PLACEHOLDER/jlinares14\/argocd-demo/g" helm/values/values-dev-template.yaml > helm/values-dev.yaml
+          sed -i "s/TAG_PLACEHOLDER/${{ github.sha }}/g" helm/values-dev.yaml
           ls -al
-          cat values-dev.yaml
+          cat helm/values-dev.yaml
 
       - name: Diff
         run: git diff
@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --global user.name 'Arthic-Cero'
           git config --global user.email '${{ secrets.USER_EMAIL }}'
-          git add values-dev.yaml
+          git add helm/values-dev.yaml
           git commit -m "Updating image tag to jlinares14/argocd-demo:${{ github.sha }} in helm dev values file"
 
       - name: Push
