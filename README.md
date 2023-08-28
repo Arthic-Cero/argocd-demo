@@ -1,2 +1,2 @@
 # argocd-demo
-Quick ArgoCD demo
+Quick ArgoCD demo using Helm
