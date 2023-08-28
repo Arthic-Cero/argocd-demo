@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Arthic-Cero/argocd-demo.git
     targetRevision: HEAD
-    path: ""
+    path: "helm"
 
     helm: 
       valueFiles:
