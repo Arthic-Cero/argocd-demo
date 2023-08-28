@@ -29,7 +29,7 @@ jobs:
         run: |
           ls -al
           sed "s/IMG_FULL_PATH_PLACEHOLDER/jlinares14\/argocd-demo/g" values/values-dev-template.yaml > values-dev.yaml
-          sed "s/TAG_PLACEHOLDER/${{ github.sha }}/g" values-dev.yaml > values-dev.yaml
+          sed -i "s/TAG_PLACEHOLDER/${{ github.sha }}/g" values-dev.yaml
           ls -al
           cat values-dev.yaml
 
