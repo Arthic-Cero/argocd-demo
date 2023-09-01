@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: jlinares14/argocd-demo
-  tag: 236f756845f04990c29695d6850be689b3913a96
+  tag: 0682fc7c010fed59fcfd9a1cf1ec8bf4a086aa4f
   pullPolicy: IfNotPresent
 
 service:
